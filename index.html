@@ -298,26 +298,31 @@
     flex: 1;
   }
   .card-actions {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 0.5rem;
   }
   .ver {
-    font-size: 0.72rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.6rem;
     font-weight: 700;
     color: var(--nb-accent-2);
     text-decoration: none;
     font-family: var(--font-head);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 0.4rem 0.85rem;
+    letter-spacing: 0.02em;
+    padding: 0.42rem 0.4rem;
     border-radius: 14px;
     border: 1px solid var(--border);
     background: var(--panel-2);
     transition: border-color 0.15s, background 0.15s;
     cursor: pointer;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
   }
   a.ver:hover { border-color: var(--border-b); background: rgba(255,255,255,.1); }
   .ver.disabled {
@@ -408,7 +413,7 @@
   <h1>Atlas de Estilos Visuales</h1>
   <p>Un catálogo de especímenes de estilo &mdash; técnicas fotográficas, movimientos históricos, tendencias de interfaz y estéticas de internet &mdash; cada uno con su ficha y un enlace directo a ejemplos reales.</p>
   <div class="stat-row">
-    <div class="stat glass"><b>77</b><span>Estilos catalogados</span></div>
+    <div class="stat glass"><b>124</b><span>Estilos catalogados</span></div>
     <div class="stat glass"><b>10</b><span>Categorías</span></div>
     <div class="stat glass"><b>2026</b><span>Edición</span></div>
   </div>
@@ -433,11 +438,11 @@
   <div class="cat-head">
     <span class="cat-tag">01</span>
     <h2>Fotografía y cámara</h2>
-    <span class="cat-count">11 estilos</span>
+    <span class="cat-count">18 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-  <div class="card-num">N&deg;001</div>
+  <div class="card-num">FC-001</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','001','thermal-scan',4,this)">
     <img src="01-fotografia-y-camara/001-thermal-scan-1.webp" alt="Ejemplo de thermal-scan" loading="lazy">
   </div>
@@ -449,7 +454,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;002</div>
+  <div class="card-num">FC-002</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','002','silhouette-double-exposure',4,this)">
     <img src="01-fotografia-y-camara/002-silhouette-double-exposure-1.webp" alt="Ejemplo de silhouette-double-exposure" loading="lazy">
   </div>
@@ -461,7 +466,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;003</div>
+  <div class="card-num">FC-003</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','003','long-exposure-light-trails',4,this)">
     <img src="01-fotografia-y-camara/003-long-exposure-light-trails-1.webp" alt="Ejemplo de long-exposure-light-trails" loading="lazy">
   </div>
@@ -473,7 +478,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;004</div>
+  <div class="card-num">FC-004</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','004','anaglifo-3d',4,this)">
     <img src="01-fotografia-y-camara/004-anaglifo-3d-1.webp" alt="Ejemplo de anaglifo-3d" loading="lazy">
   </div>
@@ -485,7 +490,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;005</div>
+  <div class="card-num">FC-005</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','005','cianotipia-cyanotype',4,this)">
     <img src="01-fotografia-y-camara/005-cianotipia-cyanotype-1.webp" alt="Ejemplo de cianotipia-cyanotype" loading="lazy">
   </div>
@@ -497,7 +502,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;006</div>
+  <div class="card-num">FC-006</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','006','rayograma-fotograma',4,this)">
     <img src="01-fotografia-y-camara/006-rayograma-fotograma-1.webp" alt="Ejemplo de rayograma-fotograma" loading="lazy">
   </div>
@@ -509,7 +514,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;007</div>
+  <div class="card-num">FC-007</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','007','solarizacion',4,this)">
     <img src="01-fotografia-y-camara/007-solarizacion-1.webp" alt="Ejemplo de solarizacion" loading="lazy">
   </div>
@@ -521,7 +526,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;008</div>
+  <div class="card-num">FC-008</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','008','grano-super8',4,this)">
     <img src="01-fotografia-y-camara/008-grano-super8-1.webp" alt="Ejemplo de grano-super8" loading="lazy">
   </div>
@@ -533,7 +538,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;009</div>
+  <div class="card-num">FC-009</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','009','tilt-shift',4,this)">
     <img src="01-fotografia-y-camara/009-tilt-shift-1.webp" alt="Ejemplo de tilt-shift" loading="lazy">
   </div>
@@ -545,7 +550,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;010</div>
+  <div class="card-num">FC-010</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','010','lomografia',4,this)">
     <img src="01-fotografia-y-camara/010-lomografia-1.webp" alt="Ejemplo de lomografia" loading="lazy">
   </div>
@@ -557,7 +562,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;011</div>
+  <div class="card-num">FC-011</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','011','infrarrojo-falso-color',4,this)">
     <img src="01-fotografia-y-camara/011-infrarrojo-falso-color-1.webp" alt="Ejemplo de infrarrojo-falso-color" loading="lazy">
   </div>
@@ -568,7 +573,7 @@
     <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=infrared+false+color+photography" target="_blank" rel="noopener">Ver en Google</a>
   </div>
 </article><article class="card glass">
-  <div class="card-num">N&deg;078</div>
+  <div class="card-num">FC-012</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','078','fotografia-kirlian',4,this)">
     <img src="01-fotografia-y-camara/078-fotografia-kirlian-1.webp" alt="Ejemplo de fotografia-kirlian" loading="lazy">
   </div>
@@ -580,7 +585,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;079</div>
+  <div class="card-num">FC-013</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','079','light-painting',4,this)">
     <img src="01-fotografia-y-camara/079-light-painting-1.webp" alt="Ejemplo de light-painting" loading="lazy">
   </div>
@@ -592,7 +597,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;080</div>
+  <div class="card-num">FC-014</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','080','radiografia-artistica-xray',4,this)">
     <img src="01-fotografia-y-camara/080-radiografia-artistica-xray-1.webp" alt="Ejemplo de radiografia-artistica-xray" loading="lazy">
   </div>
@@ -604,7 +609,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;081</div>
+  <div class="card-num">FC-015</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','081','escaneografia-scanography',4,this)">
     <img src="01-fotografia-y-camara/081-escaneografia-scanography-1.webp" alt="Ejemplo de escaneografia-scanography" loading="lazy">
   </div>
@@ -616,7 +621,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;082</div>
+  <div class="card-num">FC-016</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','082','cross-processing',4,this)">
     <img src="01-fotografia-y-camara/082-cross-processing-1.webp" alt="Ejemplo de cross-processing" loading="lazy">
   </div>
@@ -628,7 +633,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;083</div>
+  <div class="card-num">FC-017</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','083','bleach-bypass',4,this)">
     <img src="01-fotografia-y-camara/083-bleach-bypass-1.webp" alt="Ejemplo de bleach-bypass" loading="lazy">
   </div>
@@ -640,7 +645,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;084</div>
+  <div class="card-num">FC-018</div>
   <div class="card-thumb" onclick="openGallery('01-fotografia-y-camara','084','fotografia-estenopeica-pinhole',4,this)">
     <img src="01-fotografia-y-camara/084-fotografia-estenopeica-pinhole-1.webp" alt="Ejemplo de fotografia-estenopeica-pinhole" loading="lazy">
   </div>
@@ -658,11 +663,11 @@
   <div class="cat-head">
     <span class="cat-tag">02</span>
     <h2>Impresión y reproducción</h2>
-    <span class="cat-count">7 estilos</span>
+    <span class="cat-count">13 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-  <div class="card-num">N&deg;012</div>
+  <div class="card-num">IR-001</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','012','risografia-riso',4,this)">
     <img src="02-impresion-y-reproduccion/012-risografia-riso-1.webp" alt="Ejemplo de risografia-riso" loading="lazy">
   </div>
@@ -674,7 +679,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;013</div>
+  <div class="card-num">IR-002</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','013','halftone-cmyk',4,this)">
     <img src="02-impresion-y-reproduccion/013-halftone-cmyk-1.webp" alt="Ejemplo de halftone-cmyk" loading="lazy">
   </div>
@@ -686,7 +691,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;014</div>
+  <div class="card-num">IR-003</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','014','xerox-degradado',4,this)">
     <img src="02-impresion-y-reproduccion/014-xerox-degradado-1.webp" alt="Ejemplo de xerox-degradado" loading="lazy">
   </div>
@@ -698,7 +703,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;015</div>
+  <div class="card-num">IR-004</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','015','moire-pattern',4,this)">
     <img src="02-impresion-y-reproduccion/015-moire-pattern-1.webp" alt="Ejemplo de moire-pattern" loading="lazy">
   </div>
@@ -710,7 +715,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;016</div>
+  <div class="card-num">IR-005</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','016','emboss-metalico',4,this)">
     <img src="02-impresion-y-reproduccion/016-emboss-metalico-1.webp" alt="Ejemplo de emboss-metalico" loading="lazy">
   </div>
@@ -722,7 +727,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;017</div>
+  <div class="card-num">IR-006</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','017','screen-print-contraste',4,this)">
     <img src="02-impresion-y-reproduccion/017-screen-print-contraste-1.webp" alt="Ejemplo de screen-print-contraste" loading="lazy">
   </div>
@@ -734,7 +739,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;018</div>
+  <div class="card-num">IR-007</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','018','newspaper-print',4,this)">
     <img src="02-impresion-y-reproduccion/018-newspaper-print-1.webp" alt="Ejemplo de newspaper-print" loading="lazy">
   </div>
@@ -745,7 +750,7 @@
     <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=newspaper+print+texture+design" target="_blank" rel="noopener">Ver en Google</a>
   </div>
 </article><article class="card glass">
-  <div class="card-num">N&deg;085</div>
+  <div class="card-num">IR-008</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','085','letterpress',4,this)">
     <img src="02-impresion-y-reproduccion/085-letterpress-1.webp" alt="Ejemplo de letterpress" loading="lazy">
   </div>
@@ -757,7 +762,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;086</div>
+  <div class="card-num">IR-009</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','086','linograbado-linocut',4,this)">
     <img src="02-impresion-y-reproduccion/086-linograbado-linocut-1.webp" alt="Ejemplo de linograbado-linocut" loading="lazy">
   </div>
@@ -769,7 +774,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;087</div>
+  <div class="card-num">IR-010</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','087','xilografia-grabado-madera',4,this)">
     <img src="02-impresion-y-reproduccion/087-xilografia-grabado-madera-1.webp" alt="Ejemplo de xilografia-grabado-madera" loading="lazy">
   </div>
@@ -781,7 +786,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;088</div>
+  <div class="card-num">IR-011</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','088','aguafuerte-etching',4,this)">
     <img src="02-impresion-y-reproduccion/088-aguafuerte-etching-1.webp" alt="Ejemplo de aguafuerte-etching" loading="lazy">
   </div>
@@ -793,7 +798,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;089</div>
+  <div class="card-num">IR-012</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','089','duotono-duotone',4,this)">
     <img src="02-impresion-y-reproduccion/089-duotono-duotone-1.webp" alt="Ejemplo de duotono-duotone" loading="lazy">
   </div>
@@ -805,7 +810,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;090</div>
+  <div class="card-num">IR-013</div>
   <div class="card-thumb" onclick="openGallery('02-impresion-y-reproduccion','090','foil-estampado-caliente',4,this)">
     <img src="02-impresion-y-reproduccion/090-foil-estampado-caliente-1.webp" alt="Ejemplo de foil-estampado-caliente" loading="lazy">
   </div>
@@ -823,11 +828,11 @@
   <div class="cat-head">
     <span class="cat-tag">03</span>
     <h2>Glitch y digital</h2>
-    <span class="cat-count">8 estilos</span>
+    <span class="cat-count">12 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-  <div class="card-num">N&deg;019</div>
+  <div class="card-num">GD-001</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','019','pixel-sort-grid',4,this)">
     <img src="03-glitch-y-digital/019-pixel-sort-grid-1.webp" alt="Ejemplo de pixel-sort-grid" loading="lazy">
   </div>
@@ -839,7 +844,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;020</div>
+  <div class="card-num">GD-002</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','020','datamosh',4,this)">
     <img src="03-glitch-y-digital/020-datamosh-1.webp" alt="Ejemplo de datamosh" loading="lazy">
   </div>
@@ -851,7 +856,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;021</div>
+  <div class="card-num">GD-003</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','021','glitch-vhs',4,this)">
     <img src="03-glitch-y-digital/021-glitch-vhs-1.webp" alt="Ejemplo de glitch-vhs" loading="lazy">
   </div>
@@ -863,7 +868,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;022</div>
+  <div class="card-num">GD-004</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','022','chromatic-aberration',4,this)">
     <img src="03-glitch-y-digital/022-chromatic-aberration-1.webp" alt="Ejemplo de chromatic-aberration" loading="lazy">
   </div>
@@ -875,7 +880,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;023</div>
+  <div class="card-num">GD-005</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','023','scan-lines-interlace',4,this)">
     <img src="03-glitch-y-digital/023-scan-lines-interlace-1.webp" alt="Ejemplo de scan-lines-interlace" loading="lazy">
   </div>
@@ -887,7 +892,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;024</div>
+  <div class="card-num">GD-006</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','024','databending',4,this)">
     <img src="03-glitch-y-digital/024-databending-1.webp" alt="Ejemplo de databending" loading="lazy">
   </div>
@@ -899,7 +904,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;025</div>
+  <div class="card-num">GD-007</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','025','crt-distortion',4,this)">
     <img src="03-glitch-y-digital/025-crt-distortion-1.webp" alt="Ejemplo de crt-distortion" loading="lazy">
   </div>
@@ -911,7 +916,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;026</div>
+  <div class="card-num">GD-008</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','026','indigo-grain',4,this)">
     <img src="03-glitch-y-digital/026-indigo-grain-1.webp" alt="Ejemplo de indigo-grain" loading="lazy">
   </div>
@@ -922,7 +927,7 @@
     <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=indigo+grain+texture+design" target="_blank" rel="noopener">Ver en Google</a>
   </div>
 </article><article class="card glass">
-  <div class="card-num">N&deg;091</div>
+  <div class="card-num">GD-009</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','091','artefactos-jpeg',4,this)">
     <img src="03-glitch-y-digital/091-artefactos-jpeg-1.webp" alt="Ejemplo de artefactos-jpeg" loading="lazy">
   </div>
@@ -934,7 +939,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;092</div>
+  <div class="card-num">GD-010</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','092','circuit-bending',4,this)">
     <img src="03-glitch-y-digital/092-circuit-bending-1.webp" alt="Ejemplo de circuit-bending" loading="lazy">
   </div>
@@ -946,7 +951,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;093</div>
+  <div class="card-num">GD-011</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','093','corrupcion-archivo-glitch',4,this)">
     <img src="03-glitch-y-digital/093-corrupcion-archivo-glitch-1.webp" alt="Ejemplo de corrupcion-archivo-glitch" loading="lazy">
   </div>
@@ -958,7 +963,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;094</div>
+  <div class="card-num">GD-012</div>
   <div class="card-thumb" onclick="openGallery('03-glitch-y-digital','094','deep-fried-meme',4,this)">
     <img src="03-glitch-y-digital/094-deep-fried-meme-1.webp" alt="Ejemplo de deep-fried-meme" loading="lazy">
   </div>
@@ -976,11 +981,11 @@
   <div class="cat-head">
     <span class="cat-tag">04</span>
     <h2>Tipográfico y de texto</h2>
-    <span class="cat-count">4 estilos</span>
+    <span class="cat-count">6 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-  <div class="card-num">N&deg;027</div>
+  <div class="card-num">TT-001</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','027','concrete-poetry',4,this)">
     <img src="04-tipografico-y-de-texto/027-concrete-poetry-1.webp" alt="Ejemplo de concrete-poetry" loading="lazy">
   </div>
@@ -992,7 +997,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;028</div>
+  <div class="card-num">TT-002</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','028','ascii-art',4,this)">
     <img src="04-tipografico-y-de-texto/028-ascii-art-1.webp" alt="Ejemplo de ascii-art" loading="lazy">
   </div>
@@ -1004,7 +1009,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;029</div>
+  <div class="card-num">TT-003</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','029','tipografia-kinetica',4,this)">
     <img src="04-tipografico-y-de-texto/029-tipografia-kinetica-1.webp" alt="Ejemplo de tipografia-kinetica" loading="lazy">
   </div>
@@ -1016,7 +1021,7 @@
   </div>
 </article>
     <article class="card glass">
-  <div class="card-num">N&deg;030</div>
+  <div class="card-num">TT-004</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','030','blackout-poetry',4,this)">
     <img src="04-tipografico-y-de-texto/030-blackout-poetry-1.webp" alt="Ejemplo de blackout-poetry" loading="lazy">
   </div>
@@ -1027,7 +1032,7 @@
     <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=blackout+poetry+art+design" target="_blank" rel="noopener">Ver en Google</a>
   </div>
 </article><article class="card glass">
-  <div class="card-num">N&deg;095</div>
+  <div class="card-num">TT-005</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','095','blackletter-gotica',4,this)">
     <img src="04-tipografico-y-de-texto/095-blackletter-gotica-1.webp" alt="Ejemplo de blackletter-gotica" loading="lazy">
   </div>
@@ -1039,7 +1044,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;096</div>
+  <div class="card-num">TT-006</div>
   <div class="card-thumb" onclick="openGallery('04-tipografico-y-de-texto','096','tipografia-generativa',4,this)">
     <img src="04-tipografico-y-de-texto/096-tipografia-generativa-1.webp" alt="Ejemplo de tipografia-generativa" loading="lazy">
   </div>
@@ -1057,11 +1062,11 @@
   <div class="cat-head">
     <span class="cat-tag">05</span>
     <h2>Técnico y esquemático</h2>
-    <span class="cat-count">4 estilos</span>
+    <span class="cat-count">7 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;031</div>
+        <div class="card-num">TE-001</div>
         <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','031','wireframe-isometrico',4,this)">
           <img src="05-tecnico-y-esquematico/031-wireframe-isometrico-1.webp" alt="Ejemplo de wireframe-isometrico" loading="lazy">
         </div>
@@ -1073,7 +1078,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;032</div>
+        <div class="card-num">TE-002</div>
         <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','032','blueprint',4,this)">
           <img src="05-tecnico-y-esquematico/032-blueprint-1.webp" alt="Ejemplo de blueprint" loading="lazy">
         </div>
@@ -1085,7 +1090,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;033</div>
+        <div class="card-num">TE-003</div>
         <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','033','schematic-circuit-diagram',4,this)">
           <img src="05-tecnico-y-esquematico/033-schematic-circuit-diagram-1.webp" alt="Ejemplo de schematic-circuit-diagram" loading="lazy">
         </div>
@@ -1097,7 +1102,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;034</div>
+        <div class="card-num">TE-004</div>
         <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','034','exploded-view',4,this)">
           <img src="05-tecnico-y-esquematico/034-exploded-view-1.webp" alt="Ejemplo de exploded-view" loading="lazy">
         </div>
@@ -1108,7 +1113,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=exploded+view+diagram+design" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;097</div>
+  <div class="card-num">TE-005</div>
   <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','097','dibujo-de-patente',4,this)">
     <img src="05-tecnico-y-esquematico/097-dibujo-de-patente-1.webp" alt="Ejemplo de dibujo-de-patente" loading="lazy">
   </div>
@@ -1120,7 +1125,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;098</div>
+  <div class="card-num">TE-006</div>
   <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','098','mapa-topografico',4,this)">
     <img src="05-tecnico-y-esquematico/098-mapa-topografico-1.webp" alt="Ejemplo de mapa-topografico" loading="lazy">
   </div>
@@ -1132,7 +1137,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;099</div>
+  <div class="card-num">TE-007</div>
   <div class="card-thumb" onclick="openGallery('05-tecnico-y-esquematico','099','ilustracion-anatomica-corte',4,this)">
     <img src="05-tecnico-y-esquematico/099-ilustracion-anatomica-corte-1.webp" alt="Ejemplo de ilustracion-anatomica-corte" loading="lazy">
   </div>
@@ -1150,11 +1155,11 @@
   <div class="cat-head">
     <span class="cat-tag">06</span>
     <h2>Color reducido y gráfico</h2>
-    <span class="cat-count">3 estilos</span>
+    <span class="cat-count">6 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;035</div>
+        <div class="card-num">CG-001</div>
         <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','035','1-bit-dither',4,this)">
           <img src="06-color-reducido-y-grafico/035-1-bit-dither-1.webp" alt="Ejemplo de 1-bit-dither" loading="lazy">
         </div>
@@ -1166,7 +1171,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;036</div>
+        <div class="card-num">CG-002</div>
         <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','036','uv-fluorescente',4,this)">
           <img src="06-color-reducido-y-grafico/036-uv-fluorescente-1.webp" alt="Ejemplo de uv-fluorescente" loading="lazy">
         </div>
@@ -1178,7 +1183,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;037</div>
+        <div class="card-num">CG-003</div>
         <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','037','vector-flat-minimalista',4,this)">
           <img src="06-color-reducido-y-grafico/037-vector-flat-minimalista-1.webp" alt="Ejemplo de vector-flat-minimalista" loading="lazy">
         </div>
@@ -1189,7 +1194,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=flat+vector+minimalist+illustration+design" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;100</div>
+  <div class="card-num">CG-004</div>
   <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','100','gradiente-holografico-iridiscente',4,this)">
     <img src="06-color-reducido-y-grafico/100-gradiente-holografico-iridiscente-1.webp" alt="Ejemplo de gradiente-holografico-iridiscente" loading="lazy">
   </div>
@@ -1201,7 +1206,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;101</div>
+  <div class="card-num">CG-005</div>
   <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','101','monocromia',4,this)">
     <img src="06-color-reducido-y-grafico/101-monocromia-1.webp" alt="Ejemplo de monocromia" loading="lazy">
   </div>
@@ -1213,7 +1218,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;102</div>
+  <div class="card-num">CG-006</div>
   <div class="card-thumb" onclick="openGallery('06-color-reducido-y-grafico','102','tinta-plana-pantone',4,this)">
     <img src="06-color-reducido-y-grafico/102-tinta-plana-pantone-1.webp" alt="Ejemplo de tinta-plana-pantone" loading="lazy">
   </div>
@@ -1231,11 +1236,11 @@
   <div class="cat-head">
     <span class="cat-tag">07</span>
     <h2>Editorial y atmósfera</h2>
-    <span class="cat-count">5 estilos</span>
+    <span class="cat-count">8 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;038</div>
+        <div class="card-num">EA-001</div>
         <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','038','muted-editorial',4,this)">
           <img src="07-editorial-y-atmosfera/038-muted-editorial-1.webp" alt="Ejemplo de muted-editorial" loading="lazy">
         </div>
@@ -1247,7 +1252,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;039</div>
+        <div class="card-num">EA-002</div>
         <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','039','grainy-film-noir',4,this)">
           <img src="07-editorial-y-atmosfera/039-grainy-film-noir-1.webp" alt="Ejemplo de grainy-film-noir" loading="lazy">
         </div>
@@ -1259,7 +1264,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;040</div>
+        <div class="card-num">EA-003</div>
         <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','040','pastel-desaturado',4,this)">
           <img src="07-editorial-y-atmosfera/040-pastel-desaturado-1.webp" alt="Ejemplo de pastel-desaturado" loading="lazy">
         </div>
@@ -1271,7 +1276,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;041</div>
+        <div class="card-num">EA-004</div>
         <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','041','vaporwave',4,this)">
           <img src="07-editorial-y-atmosfera/041-vaporwave-1.webp" alt="Ejemplo de vaporwave" loading="lazy">
         </div>
@@ -1283,7 +1288,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;042</div>
+        <div class="card-num">EA-005</div>
         <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','042','grainy-blur',4,this)">
           <img src="07-editorial-y-atmosfera/042-grainy-blur-1.webp" alt="Ejemplo de grainy-blur" loading="lazy">
         </div>
@@ -1294,7 +1299,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=grainy+blur+photo+effect+design" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;103</div>
+  <div class="card-num">EA-006</div>
   <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','103','claroscuro',4,this)">
     <img src="07-editorial-y-atmosfera/103-claroscuro-1.webp" alt="Ejemplo de claroscuro" loading="lazy">
   </div>
@@ -1306,7 +1311,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;104</div>
+  <div class="card-num">EA-007</div>
   <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','104','high-key',4,this)">
     <img src="07-editorial-y-atmosfera/104-high-key-1.webp" alt="Ejemplo de high-key" loading="lazy">
   </div>
@@ -1318,7 +1323,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;105</div>
+  <div class="card-num">EA-008</div>
   <div class="card-thumb" onclick="openGallery('07-editorial-y-atmosfera','105','low-key',4,this)">
     <img src="07-editorial-y-atmosfera/105-low-key-1.webp" alt="Ejemplo de low-key" loading="lazy">
   </div>
@@ -1336,11 +1341,11 @@
   <div class="cat-head">
     <span class="cat-tag">08</span>
     <h2>Movimientos históricos</h2>
-    <span class="cat-count">21 estilos</span>
+    <span class="cat-count">29 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;043</div>
+        <div class="card-num">MH-001</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','043','swiss-style',4,this)">
           <img src="08-movimientos-historicos/043-swiss-style-1.webp" alt="Ejemplo de swiss-style" loading="lazy">
         </div>
@@ -1352,7 +1357,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;044</div>
+        <div class="card-num">MH-002</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','044','bauhaus',4,this)">
           <img src="08-movimientos-historicos/044-bauhaus-1.webp" alt="Ejemplo de bauhaus" loading="lazy">
         </div>
@@ -1364,7 +1369,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;045</div>
+        <div class="card-num">MH-003</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','045','art-deco',4,this)">
           <img src="08-movimientos-historicos/045-art-deco-1.webp" alt="Ejemplo de art-deco" loading="lazy">
         </div>
@@ -1376,7 +1381,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;046</div>
+        <div class="card-num">MH-004</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','046','art-nouveau',4,this)">
           <img src="08-movimientos-historicos/046-art-nouveau-1.webp" alt="Ejemplo de art-nouveau" loading="lazy">
         </div>
@@ -1388,7 +1393,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;047</div>
+        <div class="card-num">MH-005</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','047','mid-century',4,this)">
           <img src="08-movimientos-historicos/047-mid-century-1.webp" alt="Ejemplo de mid-century" loading="lazy">
         </div>
@@ -1400,7 +1405,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;048</div>
+        <div class="card-num">MH-006</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','048','space-age',4,this)">
           <img src="08-movimientos-historicos/048-space-age-1.webp" alt="Ejemplo de space-age" loading="lazy">
         </div>
@@ -1412,7 +1417,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;049</div>
+        <div class="card-num">MH-007</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','049','postmodernismo',4,this)">
           <img src="08-movimientos-historicos/049-postmodernismo-1.webp" alt="Ejemplo de postmodernismo" loading="lazy">
         </div>
@@ -1424,7 +1429,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;050</div>
+        <div class="card-num">MH-008</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','050','pop-art',4,this)">
           <img src="08-movimientos-historicos/050-pop-art-1.webp" alt="Ejemplo de pop-art" loading="lazy">
         </div>
@@ -1436,7 +1441,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;051</div>
+        <div class="card-num">MH-009</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','051','y2k',4,this)">
           <img src="08-movimientos-historicos/051-y2k-1.webp" alt="Ejemplo de y2k" loading="lazy">
         </div>
@@ -1448,7 +1453,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;052</div>
+        <div class="card-num">MH-010</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','052','cyberpunk',4,this)">
           <img src="08-movimientos-historicos/052-cyberpunk-1.webp" alt="Ejemplo de cyberpunk" loading="lazy">
         </div>
@@ -1460,7 +1465,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;053</div>
+        <div class="card-num">MH-011</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','053','anti-diseno',4,this)">
           <img src="08-movimientos-historicos/053-anti-diseno-1.webp" alt="Ejemplo de anti-diseno" loading="lazy">
         </div>
@@ -1472,7 +1477,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;054</div>
+        <div class="card-num">MH-012</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','054','maximalismo',4,this)">
           <img src="08-movimientos-historicos/054-maximalismo-1.webp" alt="Ejemplo de maximalismo" loading="lazy">
         </div>
@@ -1484,7 +1489,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;055</div>
+        <div class="card-num">MH-013</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','055','neobrutalismo',4,this)">
           <img src="08-movimientos-historicos/055-neobrutalismo-1.webp" alt="Ejemplo de neobrutalismo" loading="lazy">
         </div>
@@ -1496,7 +1501,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;056</div>
+        <div class="card-num">MH-014</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','056','grunge',4,this)">
           <img src="08-movimientos-historicos/056-grunge-1.webp" alt="Ejemplo de grunge" loading="lazy">
         </div>
@@ -1508,7 +1513,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;057</div>
+        <div class="card-num">MH-015</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','057','flat-design',4,this)">
           <img src="08-movimientos-historicos/057-flat-design-1.webp" alt="Ejemplo de flat-design" loading="lazy">
         </div>
@@ -1520,7 +1525,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;058</div>
+        <div class="card-num">MH-016</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','058','neumorfismo',4,this)">
           <img src="08-movimientos-historicos/058-neumorfismo-1.webp" alt="Ejemplo de neumorfismo" loading="lazy">
         </div>
@@ -1532,7 +1537,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;059</div>
+        <div class="card-num">MH-017</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','059','liquid-blob',4,this)">
           <img src="08-movimientos-historicos/059-liquid-blob-1.webp" alt="Ejemplo de liquid-blob" loading="lazy">
         </div>
@@ -1544,7 +1549,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;060</div>
+        <div class="card-num">MH-018</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','060','collage',4,this)">
           <img src="08-movimientos-historicos/060-collage-1.webp" alt="Ejemplo de collage" loading="lazy">
         </div>
@@ -1556,7 +1561,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;061</div>
+        <div class="card-num">MH-019</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','061','pixel-art',4,this)">
           <img src="08-movimientos-historicos/061-pixel-art-1.webp" alt="Ejemplo de pixel-art" loading="lazy">
         </div>
@@ -1568,7 +1573,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;062</div>
+        <div class="card-num">MH-020</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','062','editorial-design',4,this)">
           <img src="08-movimientos-historicos/062-editorial-design-1.webp" alt="Ejemplo de editorial-design" loading="lazy">
         </div>
@@ -1580,7 +1585,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;063</div>
+        <div class="card-num">MH-021</div>
         <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','063','psicodelico',4,this)">
           <img src="08-movimientos-historicos/063-psicodelico-1.webp" alt="Ejemplo de psicodelico" loading="lazy">
         </div>
@@ -1591,7 +1596,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=psychedelic+poster+design+60s" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;106</div>
+  <div class="card-num">MH-022</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','106','constructivismo',4,this)">
     <img src="08-movimientos-historicos/106-constructivismo-1.webp" alt="Ejemplo de constructivismo" loading="lazy">
   </div>
@@ -1603,7 +1608,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;107</div>
+  <div class="card-num">MH-023</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','107','futurismo',4,this)">
     <img src="08-movimientos-historicos/107-futurismo-1.webp" alt="Ejemplo de futurismo" loading="lazy">
   </div>
@@ -1615,7 +1620,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;108</div>
+  <div class="card-num">MH-024</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','108','suprematismo',4,this)">
     <img src="08-movimientos-historicos/108-suprematismo-1.webp" alt="Ejemplo de suprematismo" loading="lazy">
   </div>
@@ -1627,7 +1632,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;109</div>
+  <div class="card-num">MH-025</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','109','dadaismo',4,this)">
     <img src="08-movimientos-historicos/109-dadaismo-1.webp" alt="Ejemplo de dadaismo" loading="lazy">
   </div>
@@ -1639,7 +1644,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;110</div>
+  <div class="card-num">MH-026</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','110','de-stijl-neoplasticismo',4,this)">
     <img src="08-movimientos-historicos/110-de-stijl-neoplasticismo-1.webp" alt="Ejemplo de de-stijl-neoplasticismo" loading="lazy">
   </div>
@@ -1651,7 +1656,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;111</div>
+  <div class="card-num">MH-027</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','111','ukiyo-e',4,this)">
     <img src="08-movimientos-historicos/111-ukiyo-e-1.webp" alt="Ejemplo de ukiyo-e" loading="lazy">
   </div>
@@ -1663,7 +1668,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;112</div>
+  <div class="card-num">MH-028</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','112','memphis-design',4,this)">
     <img src="08-movimientos-historicos/112-memphis-design-1.webp" alt="Ejemplo de memphis-design" loading="lazy">
   </div>
@@ -1675,7 +1680,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;113</div>
+  <div class="card-num">MH-029</div>
   <div class="card-thumb" onclick="openGallery('08-movimientos-historicos','113','op-art',4,this)">
     <img src="08-movimientos-historicos/113-op-art-1.webp" alt="Ejemplo de op-art" loading="lazy">
   </div>
@@ -1693,11 +1698,11 @@
   <div class="cat-head">
     <span class="cat-tag">09</span>
     <h2>UI e interfaz</h2>
-    <span class="cat-count">6 estilos</span>
+    <span class="cat-count">9 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;064</div>
+        <div class="card-num">UI-001</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','064','skeuomorfismo',4,this)">
           <img src="09-ui-e-interfaz/064-skeuomorfismo-1.webp" alt="Ejemplo de skeuomorfismo" loading="lazy">
         </div>
@@ -1709,7 +1714,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;065</div>
+        <div class="card-num">UI-002</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','065','glassmorfismo',4,this)">
           <img src="09-ui-e-interfaz/065-glassmorfismo-1.webp" alt="Ejemplo de glassmorfismo" loading="lazy">
         </div>
@@ -1721,7 +1726,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;066</div>
+        <div class="card-num">UI-003</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','066','claymorfismo',4,this)">
           <img src="09-ui-e-interfaz/066-claymorfismo-1.webp" alt="Ejemplo de claymorfismo" loading="lazy">
         </div>
@@ -1733,7 +1738,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;067</div>
+        <div class="card-num">UI-004</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','067','minimalismo',4,this)">
           <img src="09-ui-e-interfaz/067-minimalismo-1.webp" alt="Ejemplo de minimalismo" loading="lazy">
         </div>
@@ -1745,7 +1750,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;068</div>
+        <div class="card-num">UI-005</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','068','bento-grid',4,this)">
           <img src="09-ui-e-interfaz/068-bento-grid-1.webp" alt="Ejemplo de bento-grid" loading="lazy">
         </div>
@@ -1757,7 +1762,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;069</div>
+        <div class="card-num">UI-006</div>
         <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','069','spatial-ui',4,this)">
           <img src="09-ui-e-interfaz/069-spatial-ui-1.webp" alt="Ejemplo de spatial-ui" loading="lazy">
         </div>
@@ -1768,7 +1773,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=spatial+ui+design+vision+pro" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;114</div>
+  <div class="card-num">UI-007</div>
   <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','114','terminal-hacker-aesthetic',4,this)">
     <img src="09-ui-e-interfaz/114-terminal-hacker-aesthetic-1.webp" alt="Ejemplo de terminal-hacker-aesthetic" loading="lazy">
   </div>
@@ -1780,7 +1785,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;115</div>
+  <div class="card-num">UI-008</div>
   <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','115','brutalismo-web',4,this)">
     <img src="09-ui-e-interfaz/115-brutalismo-web-1.webp" alt="Ejemplo de brutalismo-web" loading="lazy">
   </div>
@@ -1792,7 +1797,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;116</div>
+  <div class="card-num">UI-009</div>
   <div class="card-thumb" onclick="openGallery('09-ui-e-interfaz','116','material-design',4,this)">
     <img src="09-ui-e-interfaz/116-material-design-1.webp" alt="Ejemplo de material-design" loading="lazy">
   </div>
@@ -1810,11 +1815,11 @@
   <div class="cat-head">
     <span class="cat-tag">10</span>
     <h2>Tendencias 2026 / estética de internet</h2>
-    <span class="cat-count">8 estilos</span>
+    <span class="cat-count">16 estilos</span>
   </div>
   <div class="grid">
     <article class="card glass">
-        <div class="card-num">N&deg;070</div>
+        <div class="card-num">TI-001</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','070','frutiger-aero',4,this)">
           <img src="10-tendencias-2026-estetica-internet/070-frutiger-aero-1.webp" alt="Ejemplo de frutiger-aero" loading="lazy">
         </div>
@@ -1826,7 +1831,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;071</div>
+        <div class="card-num">TI-002</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','071','surveillance',4,this)">
           <img src="10-tendencias-2026-estetica-internet/071-surveillance-1.webp" alt="Ejemplo de surveillance" loading="lazy">
         </div>
@@ -1838,7 +1843,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;072</div>
+        <div class="card-num">TI-003</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','072','kidcore',4,this)">
           <img src="10-tendencias-2026-estetica-internet/072-kidcore-1.webp" alt="Ejemplo de kidcore" loading="lazy">
         </div>
@@ -1850,7 +1855,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;073</div>
+        <div class="card-num">TI-004</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','073','neon-noir',4,this)">
           <img src="10-tendencias-2026-estetica-internet/073-neon-noir-1.webp" alt="Ejemplo de neon-noir" loading="lazy">
         </div>
@@ -1862,7 +1867,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;074</div>
+        <div class="card-num">TI-005</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','074','hyper-bloom',4,this)">
           <img src="10-tendencias-2026-estetica-internet/074-hyper-bloom-1.webp" alt="Ejemplo de hyper-bloom" loading="lazy">
         </div>
@@ -1874,7 +1879,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;075</div>
+        <div class="card-num">TI-006</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','075','chrome-liquid-metal',4,this)">
           <img src="10-tendencias-2026-estetica-internet/075-chrome-liquid-metal-1.webp" alt="Ejemplo de chrome-liquid-metal" loading="lazy">
         </div>
@@ -1886,7 +1891,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;076</div>
+        <div class="card-num">TI-007</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','076','graffiti-street-art',4,this)">
           <img src="10-tendencias-2026-estetica-internet/076-graffiti-street-art-1.webp" alt="Ejemplo de graffiti-street-art" loading="lazy">
         </div>
@@ -1898,7 +1903,7 @@
         </div>
       </article>
     <article class="card glass">
-        <div class="card-num">N&deg;077</div>
+        <div class="card-num">TI-008</div>
         <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','077','solarpunk',4,this)">
           <img src="10-tendencias-2026-estetica-internet/077-solarpunk-1.webp" alt="Ejemplo de solarpunk" loading="lazy">
         </div>
@@ -1909,7 +1914,7 @@
           <a class="ver ver-google" href="https://www.google.com/search?tbm=isch&q=solarpunk+design+aesthetic" target="_blank" rel="noopener">Ver en Google</a>
         </div>
       </article><article class="card glass">
-  <div class="card-num">N&deg;117</div>
+  <div class="card-num">TI-009</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','117','cottagecore',4,this)">
     <img src="10-tendencias-2026-estetica-internet/117-cottagecore-1.webp" alt="Ejemplo de cottagecore" loading="lazy">
   </div>
@@ -1921,7 +1926,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;118</div>
+  <div class="card-num">TI-010</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','118','goblincore',4,this)">
     <img src="10-tendencias-2026-estetica-internet/118-goblincore-1.webp" alt="Ejemplo de goblincore" loading="lazy">
   </div>
@@ -1933,7 +1938,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;119</div>
+  <div class="card-num">TI-011</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','119','dark-academia',4,this)">
     <img src="10-tendencias-2026-estetica-internet/119-dark-academia-1.webp" alt="Ejemplo de dark-academia" loading="lazy">
   </div>
@@ -1945,7 +1950,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;120</div>
+  <div class="card-num">TI-012</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','120','weirdcore-dreamcore',4,this)">
     <img src="10-tendencias-2026-estetica-internet/120-weirdcore-dreamcore-1.webp" alt="Ejemplo de weirdcore-dreamcore" loading="lazy">
   </div>
@@ -1957,7 +1962,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;121</div>
+  <div class="card-num">TI-013</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','121','liminal-space',4,this)">
     <img src="10-tendencias-2026-estetica-internet/121-liminal-space-1.webp" alt="Ejemplo de liminal-space" loading="lazy">
   </div>
@@ -1969,7 +1974,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;122</div>
+  <div class="card-num">TI-014</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','122','cybergoth',4,this)">
     <img src="10-tendencias-2026-estetica-internet/122-cybergoth-1.webp" alt="Ejemplo de cybergoth" loading="lazy">
   </div>
@@ -1981,7 +1986,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;123</div>
+  <div class="card-num">TI-015</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','123','indie-sleaze',4,this)">
     <img src="10-tendencias-2026-estetica-internet/123-indie-sleaze-1.webp" alt="Ejemplo de indie-sleaze" loading="lazy">
   </div>
@@ -1993,7 +1998,7 @@
   </div>
 </article>
 <article class="card glass">
-  <div class="card-num">N&deg;124</div>
+  <div class="card-num">TI-016</div>
   <div class="card-thumb" onclick="openGallery('10-tendencias-2026-estetica-internet','124','seapunk',4,this)">
     <img src="10-tendencias-2026-estetica-internet/124-seapunk-1.webp" alt="Ejemplo de seapunk" loading="lazy">
   </div>
@@ -2040,20 +2045,48 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeGallery();
 });
 
+const navEl = document.querySelector('nav.index');
 const navTabs = document.querySelectorAll('nav.index a');
 const catSections = document.querySelectorAll('main section.cat');
+let showingAll = true;
+
+function setActiveTab(filter) {
+  navTabs.forEach(t => t.classList.toggle('active', t.dataset.filter === filter));
+  const activeTab = document.querySelector(`nav.index a[data-filter="${filter}"]`);
+  if (activeTab && navEl) {
+    activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+}
+
 navTabs.forEach(tab => {
   tab.addEventListener('click', (e) => {
     e.preventDefault();
     const filter = tab.dataset.filter;
-    navTabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
+    showingAll = (filter === 'all');
+    setActiveTab(filter);
     catSections.forEach(sec => {
       sec.style.display = (filter === 'all' || sec.id === filter) ? '' : 'none';
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+
+// Scrollspy: while "Todos" is active, follow scroll position and move the
+// nav highlight (and the nav strip itself) to match the section in view.
+const scrollSpy = new IntersectionObserver((entries) => {
+  if (!showingAll) return;
+  let topMost = null;
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (!topMost || entry.boundingClientRect.top < topMost.boundingClientRect.top) {
+        topMost = entry;
+      }
+    }
+  });
+  if (topMost) setActiveTab(topMost.target.id);
+}, { root: null, rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+catSections.forEach(sec => scrollSpy.observe(sec));
 </script>
 </body>
 </html>
